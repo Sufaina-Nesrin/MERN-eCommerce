@@ -27,14 +27,14 @@ router.delete('/delete/:id',verifyToken, deleteUser)
 router.get('/products', getAllProducts)
 router.get('/products/:id', getProduct)
 router.get('/product/:category', getProductbyCat)
-router.put('/review/:id', postReview )
+router.put('/review/:id',verifyToken, postReview )
 
 router.put('/addToCart/:id', addToCart)
 router.get('/cart',getCart)
 router.put('/removeItem/:id', deleteFromCart)
 router.put('/updateQty/:id', updateQty)
 
-router.post('/order', createOrder)
+router.post('/order',verifyToken, createOrder)
 router.get('/getAllOrders', getAllOrders)
 router.get('/getOrder/:id', getOrderById)
 
